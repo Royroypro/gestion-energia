@@ -1,0 +1,9 @@
+PARA PODER EJECUTAR SCRIPT EN PowerShell.
+...........................................
+
+Set-ExecutionPolicy AllSigned
+Set-ExecutionPolicy RemoteSigned
+
+PARA VER LOS PLANES DE ENERGIA
+........................................
+Get-CimInstance -Namespace "Root\cimv2\power" -ClassName Win32_PowerPlan | Select-Object -Property ElementName, InstanceID
